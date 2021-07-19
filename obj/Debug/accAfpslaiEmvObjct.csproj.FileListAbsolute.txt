@@ -1,0 +1,22 @@
+D:\WORK\Projects\accAfpslaiEmvObjct\bin\Debug\accAfpslaiEmvObjct.dll
+D:\WORK\Projects\accAfpslaiEmvObjct\bin\Debug\accAfpslaiEmvObjct.pdb
+D:\WORK\Projects\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.csproj.CoreCompileInputs.cache
+D:\WORK\Projects\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.dll
+D:\WORK\Projects\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.pdb
+D:\WORK\Projects\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.csproj.AssemblyReference.cache
+D:\WORK\Projects\accAfpslaiEmvObjct\bin\Debug\accAfpslaiEmvEncDec.dll
+D:\WORK\Projects\accAfpslaiEmvObjct\bin\Debug\Newtonsoft.Json.dll
+D:\WORK\Projects\accAfpslaiEmvObjct\bin\Debug\accAfpslaiEmvEncDec.pdb
+D:\WORK\Projects\accAfpslaiEmvObjct\bin\Debug\Newtonsoft.Json.xml
+D:\WORK\Projects\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.csproj.CopyComplete
+C:\Drive D\accAfpslaiEmvObjct\bin\Debug\accAfpslaiEmvObjct.dll
+C:\Drive D\accAfpslaiEmvObjct\bin\Debug\accAfpslaiEmvObjct.pdb
+C:\Drive D\accAfpslaiEmvObjct\bin\Debug\accAfpslaiEmvEncDec.dll
+C:\Drive D\accAfpslaiEmvObjct\bin\Debug\Newtonsoft.Json.dll
+C:\Drive D\accAfpslaiEmvObjct\bin\Debug\accAfpslaiEmvEncDec.pdb
+C:\Drive D\accAfpslaiEmvObjct\bin\Debug\Newtonsoft.Json.xml
+C:\Drive D\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.csproj.AssemblyReference.cache
+C:\Drive D\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.csproj.CoreCompileInputs.cache
+C:\Drive D\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.csproj.CopyComplete
+C:\Drive D\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.dll
+C:\Drive D\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.pdb
