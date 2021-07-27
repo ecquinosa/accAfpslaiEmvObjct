@@ -35,7 +35,7 @@ namespace accAfpslaiEmvObjct
         }
 
         private string system;
-        private string baseUrl;
+        public string baseUrl;
         private string apiKey;
         private string branchIssue;
         public static string msgHeader;
@@ -103,7 +103,8 @@ namespace accAfpslaiEmvObjct
             pushCMSData,
             getMembersPrintingTypeSummary,
             getMembersRecardReasonSummary,
-            getMember
+            getMember,
+            isPasswordValid
         }
 
         public enum cpsCardElement
