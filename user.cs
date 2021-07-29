@@ -23,6 +23,8 @@ namespace accAfpslaiEmvObjct
         public int roleId { get; set; }
         public string roleDesc { get; set; }
 
+        public DateTime dateCreated { get; set; }
+
         public bool is_deleted { get; set; }
 
         public bool isChangePassword { get; set; }

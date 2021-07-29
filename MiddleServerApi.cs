@@ -675,6 +675,7 @@ namespace accAfpslaiEmvObjct
                 var message = payload.message;
                 if (result == 0)
                 {
+                    dcsUser.userPass = accAfpslaiEmvEncDec.Aes256CbcEncrypter.Encrypt(userNewPass);
                     Utilities.ShowInformationMessage(message.ToString());
 
                     return true;
