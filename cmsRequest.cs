@@ -6,9 +6,9 @@ namespace accAfpslaiEmvObjct
 
         public string cif { get; set; }
         public string cardNo { get; set; }
-
         public string mobileNo { get; set; }
-
+        public string nameOnCard { get; set; }
+        
     }
 
 

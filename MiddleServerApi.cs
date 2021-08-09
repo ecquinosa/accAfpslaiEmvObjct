@@ -742,7 +742,7 @@ namespace accAfpslaiEmvObjct
                 if (result == 0)
                 {
                     //var obj = payload.obj;
-                    if(!string.IsNullOrEmpty(message.ToString())) Utilities.ShowWarningMessage(message.ToString());
+                    //if(!string.IsNullOrEmpty(message.ToString())) Utilities.ShowWarningMessage(message.ToString());
 
                     return true;
                 }

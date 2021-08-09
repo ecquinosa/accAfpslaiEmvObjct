@@ -13,6 +13,7 @@ namespace accAfpslaiEmvObjct
         public string cif { get; set; }
         public string cardNo { get; set; }
         public string mobileNo { get; set; }
+        public string cardName { get; set; }
         public string terminalId { get; set; }
         public string branchId { get; set; }
         public string timeStamp { get; set; }
