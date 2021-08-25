@@ -104,7 +104,8 @@ namespace accAfpslaiEmvObjct
             getMembersPrintingTypeSummary,
             getMembersRecardReasonSummary,
             getMember,
-            isPasswordValid
+            isPasswordValid,
+            getCardForPrintv2,
         }
 
         public enum cpsCardElement
@@ -362,11 +363,41 @@ namespace accAfpslaiEmvObjct
             }
         }
 
-        public bool GetMember(int memberId, string cif, string branch, ref object obj)
+        public bool GetCardForPrintv2(string cif, ref object obj)
         {
             string soapResponse = "";
             string err = "";
-            string soapStr = Newtonsoft.Json.JsonConvert.SerializeObject(requestPayload("{ 'memberId': " + memberId + ",'cif': '" + cif + "','branch': '" + branch + "' }"));
+            string soapStr = Newtonsoft.Json.JsonConvert.SerializeObject(requestPayload("{ 'cif': '" + cif + "' }"));
+            bool response = ExecuteApiRequest(string.Format(@"{0}/api/{1}", baseUrl, System.Enum.GetName(typeof(msApi), msApi.getCardForPrintv2)), soapStr, ref soapResponse, ref err);
+            if (response)
+            {
+                dynamic payload = Newtonsoft.Json.JsonConvert.DeserializeObject(soapResponse);
+                var result = payload.result;
+                var message = payload.message;
+                if (result == 0)
+                {
+                    obj = payload.obj;
+
+                    return true;
+                }
+                else
+                {
+                    Utilities.ShowErrorMessage(message.ToString());
+                    return false;
+                }
+            }
+            else
+            {
+                Utilities.ShowErrorMessage(err);
+                return false;
+            }
+        }
+
+        public bool GetMember(int memberId, string cif, string branch, DateTime startDate, DateTime endDate, int printTypeId, int recardReasonId, ref object obj)
+        {
+            string soapResponse = "";
+            string err = "";
+            string soapStr = Newtonsoft.Json.JsonConvert.SerializeObject(requestPayload("{ 'memberId': " + memberId + ",'cif': '" + cif + "','branch': '" + branch +  "','startDate': '" + startDate +  "', 'endDate': '" + endDate + "', 'printTypeId': " + printTypeId + ", 'recardReasonId': " + recardReasonId + "}"));
             bool response = ExecuteApiRequest(string.Format(@"{0}/api/{1}", baseUrl, System.Enum.GetName(typeof(msApi), msApi.getMember)), soapStr, ref soapResponse, ref err);
             if (response)
             {

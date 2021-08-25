@@ -8,7 +8,7 @@ namespace accAfpslaiEmvObjct
     public class cardForPrint
     {
 
-        public int cardId { get; set; }
+        public Nullable<int> cardId { get; set; }
         public int memberId { get; set; }
         public string cif { get; set; }
         public string cardNo { get; set; }
@@ -17,14 +17,15 @@ namespace accAfpslaiEmvObjct
         public string middle_name { get; set; }
         public string last_name { get; set; }
         public string suffix { get; set; }
-        public string membership_date { get; set; }
+        public Nullable<DateTime> membership_date { get; set; }
         public string card_valid_thru { get; set; }
         public string gender { get; set; }
         public string branch_issued { get; set; }
         public string mobileNo { get; set; }
         public string terminalId { get; set; }
-        public string dateCaptured { get; set; }
-        public string datePrinted { get; set; }
+        public Nullable<DateTime> dateCaptured { get; set; }
+        public Nullable<DateTime> datePrinted { get; set; }
+        public Nullable<TimeSpan> timePrinted { get; set; }
         public string base64Photo { get; set; }
 
     }
