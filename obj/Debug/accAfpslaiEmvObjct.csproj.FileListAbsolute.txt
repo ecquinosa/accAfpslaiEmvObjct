@@ -20,3 +20,6 @@ C:\Drive D\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.csproj.CoreCompileInp
 C:\Drive D\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.csproj.CopyComplete
 C:\Drive D\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.dll
 C:\Drive D\accAfpslaiEmvObjct\obj\Debug\accAfpslaiEmvObjct.pdb
+D:\WORK\Projects\accAfpslaiEmvObjct\bin\Debug\accAfpslaiEmvObjct.dll.config
+D:\WORK\Projects\accAfpslaiEmvObjct\bin\Debug\System.Net.Http.Formatting.dll
+D:\WORK\Projects\accAfpslaiEmvObjct\bin\Debug\System.Net.Http.Formatting.xml

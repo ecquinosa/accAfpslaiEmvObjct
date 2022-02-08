@@ -39,6 +39,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\acc-afpslai-accAfpslaiEmvSrvc\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -57,6 +60,22 @@
     <Compile Include="cardForPrint.cs" />
     <Compile Include="cbsCms.cs" />
     <Compile Include="cbsData.cs" />
+    <Compile Include="CBS\ConsolSys.cs" />
+    <Compile Include="CBS\Core\Enums.cs" />
+    <Compile Include="CBS\Core\Message\BranchStatusInquiryMessage.cs" />
+    <Compile Include="CBS\Core\Message\CMSCIFDetailInquiryMessage.cs" />
+    <Compile Include="CBS\Core\Message\MessageBase.cs" />
+    <Compile Include="CBS\Core\Message\TransactionServiceMessageBase.cs" />
+    <Compile Include="CBS\Header_Request.cs" />
+    <Compile Include="CBS\Payload_Request.cs" />
+    <Compile Include="CBS\cif_detail_search_request.cs" />
+    <Compile Include="CBS\PersonalInfo.cs" />
+    <Compile Include="CBS\cif_detail_search_response.cs" />
+    <Compile Include="CBS\AddressList.cs" />
+    <Compile Include="CBS\ContactList.cs" />
+    <Compile Include="CBS\HostMessage.cs" />
+    <Compile Include="CBS\HostReply.cs" />
+    <Compile Include="CBS\Header_Response.cs" />
     <Compile Include="civil_status.cs" />
     <Compile Include="cmsRequest.cs" />
     <Compile Include="cmsResponse.cs" />
@@ -73,11 +92,13 @@
     <Compile Include="print_type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="recard_reason.cs" />
+    <Compile Include="cbsRequest.cs" />
     <Compile Include="requestCredential.cs" />
     <Compile Include="requestPayload.cs" />
     <Compile Include="response.cs" />
     <Compile Include="searchDateParam.cs" />
     <Compile Include="searchParam.cs" />
+    <Compile Include="CBS\ClientIdentificationList.cs" />
     <Compile Include="system_log.cs" />
     <Compile Include="system_role.cs" />
     <Compile Include="system_user.cs" />
@@ -85,6 +106,7 @@
     <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

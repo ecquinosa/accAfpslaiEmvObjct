@@ -61,6 +61,94 @@ namespace accAfpslaiEmvObjct
             }            
         }
 
+        public static string GenerateCBSSalt(string userName, string sequenceNo, string timeStamp)
+        {
+            var salt = string.Concat(userName, "84A47863-BDD5-4949-B364-DD2C993FBE08" + "SPICY",sequenceNo,timeStamp); 
+
+            var sha = System.Security.Cryptography.SHA256.Create();
+
+            var hashed = sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(salt));
+
+
+            var binaryHashed = System.String.Empty;
+            for (var x = 0; x < hashed.Length; x++)
+            {
+                binaryHashed = binaryHashed + System.String.Format("{0:x2}", hashed[x]);
+
+            }
+
+            return binaryHashed;
+        }
+
+        public static string GetCBS_ClientStatusCode(string CLIENT_STATUS_CODE)
+        {
+            string value = "";
+
+            switch (CLIENT_STATUS_CODE)
+            {
+                case "A":
+                    value = "ACTIVE";
+                    break;
+                case "H":
+                    value = "HOLD";
+                    break;
+                case "T":
+                    value = "TRMND";
+                    break;
+            }
+
+            return value;
+        }
+
+        public static string GetCBS_ClientType(string CLIENT_TYPE)
+        {
+            string value = "";
+
+            switch (CLIENT_TYPE)
+            {
+                case "R":
+                    value = "Regular";
+                    break;
+                case "A":
+                    value = "Associate";
+                    break;
+                case "C":
+                    value = "Corporate Regular";
+                    break;
+                case "D":
+                    value = "Corporate Associate";
+                    break;
+            }
+
+            return value;
+        }
+
+        public static string GetCBS_CivilStatus(string MARITAL_STATUS)
+        {
+            string value = "";
+
+            switch (MARITAL_STATUS)
+            {
+                case "S":
+                    value = "Single";
+                    break;
+                case "M":
+                    value = "Married";
+                    break;
+                case "A":
+                    value = "Divorced";
+                    break;
+                case "X":
+                    value = "Separated";
+                    break;
+                case "W":
+                    value = "Widowed";
+                    break;
+            }
+
+            return value;
+        }
+
 
     }
 }
