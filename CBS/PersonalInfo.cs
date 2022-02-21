@@ -37,5 +37,12 @@ namespace accAfpslaiEmvObjct
         public string LAST_UPDATED_BY { get; set; }
         public string LAST_UPDATED_BRANCH { get; set; }
         public string LAST_APPROVED_BY { get; set; }
+        public Nullable<System.DateTime> DATE_OPEN { get; set; }
+       public string ENDOSER_CIF_NO { get; set; }
+        public string ENDOSER_LAST_NAME { get; set; }
+        public string ENDOSER_FIRST_NAME { get; set; }
+        public string ENDOSER_MIDDLE_NAME { get; set; }
+        public string ENDOSER_SUFFIX_NAME { get; set; }
+        public string ENDOSER_CLIENT_SUB_TYPE { get; set; }
     }
 }
