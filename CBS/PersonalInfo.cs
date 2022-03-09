@@ -43,6 +43,6 @@ namespace accAfpslaiEmvObjct
         public string ENDOSER_FIRST_NAME { get; set; }
         public string ENDOSER_MIDDLE_NAME { get; set; }
         public string ENDOSER_SUFFIX_NAME { get; set; }
-        public string ENDOSER_CLIENT_SUB_TYPE { get; set; }
+        public string CLIENT_SUB_TYPE { get; set; }
     }
 }

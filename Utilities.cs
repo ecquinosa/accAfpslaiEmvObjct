@@ -95,6 +95,41 @@ namespace accAfpslaiEmvObjct
                 case "T":
                     value = "TRMND";
                     break;
+                default:
+                    value = "";
+                    break;
+            }
+
+            return value;
+        }
+
+        public static string GetCBS_AssociateTypeCode(string CLIENT_SUB_TYPE)
+        {
+            string value = "";
+
+            switch (CLIENT_SUB_TYPE)
+            {
+                case "001":
+                    value = "PVAO";
+                    break;
+                case "002":
+                    value = "Dependent";
+                    break;
+                case "003":
+                    value = "Cadet PMA";
+                    break;
+                case "004":
+                    value = "Cadet PNPA";
+                    break;
+                case "005":
+                    value = "Cadet OCS";
+                    break;
+                case "006":
+                    value = "Cadet NOCC";
+                    break;
+                default:
+                    value = "";
+                    break;
             }
 
             return value;
@@ -117,6 +152,9 @@ namespace accAfpslaiEmvObjct
                     break;
                 case "D":
                     value = "Corporate Associate";
+                    break;
+                default:
+                    value = "";
                     break;
             }
 
@@ -143,6 +181,9 @@ namespace accAfpslaiEmvObjct
                     break;
                 case "W":
                     value = "Widowed";
+                    break;
+                default:
+                    value = "";
                     break;
             }
 
