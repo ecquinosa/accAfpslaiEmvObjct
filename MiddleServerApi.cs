@@ -106,6 +106,10 @@ namespace accAfpslaiEmvObjct
             getMember,
             isPasswordValid,
             getCardForPrintv2,
+            userLogout,
+            saveSystemLog,
+            getSystemLog,
+            getMemberReport
         }
 
         public enum cpsCardElement
@@ -423,6 +427,36 @@ namespace accAfpslaiEmvObjct
             }
         }
 
+        public bool GetMemberReport(int memberId, string cif, string branch, DateTime startDate, DateTime endDate, int printTypeId, int recardReasonId, ref object obj)
+        {
+            string soapResponse = "";
+            string err = "";
+            string soapStr = Newtonsoft.Json.JsonConvert.SerializeObject(requestPayload("{ 'memberId': " + memberId + ",'cif': '" + cif + "','branch': '" + branch + "','startDate': '" + startDate + "', 'endDate': '" + endDate + "', 'printTypeId': " + printTypeId + ", 'recardReasonId': " + recardReasonId + "}"));
+            bool response = ExecuteApiRequest(string.Format(@"{0}/api/{1}", baseUrl, System.Enum.GetName(typeof(msApi), msApi.getMemberReport)), soapStr, ref soapResponse, ref err);
+            if (response)
+            {
+                dynamic payload = Newtonsoft.Json.JsonConvert.DeserializeObject(soapResponse);
+                var result = payload.result;
+                var message = payload.message;
+                if (result == 0)
+                {
+                    obj = payload.obj;
+
+                    return true;
+                }
+                else
+                {
+                    Utilities.ShowErrorMessage(message.ToString());
+                    return false;
+                }
+            }
+            else
+            {
+                Utilities.ShowErrorMessage(err);
+                return false;
+            }
+        }
+
         public bool GetMembersPrintingTypeSummary(string branch, DateTime startDate, DateTime endDate, ref object obj)
         {
             string soapResponse = "";
@@ -682,6 +716,37 @@ namespace accAfpslaiEmvObjct
                 else
                 {
                     Utilities.ShowErrorMessage(message.ToString());
+                    return false;
+                }
+            }
+            else
+            {
+                Utilities.ShowErrorMessage(err);
+                return false;
+            }
+        }
+
+        public bool saveSystemLog(system_log system_log)
+        {
+            string soapResponse = "";
+            string err = "";
+            string soapStr = Newtonsoft.Json.JsonConvert.SerializeObject(requestPayload(Newtonsoft.Json.JsonConvert.SerializeObject(system_log)));
+
+            bool response = ExecuteApiRequest(string.Format(@"{0}/api/{1}", baseUrl, System.Enum.GetName(typeof(msApi), msApi.saveSystemLog)), soapStr, ref soapResponse, ref err);
+            if (response)
+            {
+                dynamic payload = Newtonsoft.Json.JsonConvert.DeserializeObject(soapResponse);
+                var result = payload.result;
+                var message = payload.message;
+                if (result == 0)
+                {
+                    //Utilities.ShowInformationMessage(message.ToString());
+
+                    return true;
+                }
+                else
+                {
+                    //Utilities.ShowErrorMessage(message.ToString());
                     return false;
                 }
             }
@@ -953,6 +1018,35 @@ namespace accAfpslaiEmvObjct
             string err = "";
             string soapStr = Newtonsoft.Json.JsonConvert.SerializeObject(requestPayload(Newtonsoft.Json.JsonConvert.SerializeObject(cancelCapture)));
             bool response = ExecuteApiRequest(string.Format(@"{0}/api/{1}", baseUrl, System.Enum.GetName(typeof(msApi), msApi.cancelCapture)), soapStr, ref soapResponse, ref err);
+            if (response)
+            {
+                dynamic payload = Newtonsoft.Json.JsonConvert.DeserializeObject(soapResponse);
+                var result = payload.result;
+                var message = payload.message;
+                if (result == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    Utilities.ShowErrorMessage(message.ToString());
+                    return false;
+                }
+            }
+            else
+            {
+                Utilities.ShowErrorMessage(err);
+                return false;
+            }
+        }
+
+        public bool userLogOut(system_user user)
+        {
+
+            string soapResponse = "";
+            string err = "";
+            string soapStr = Newtonsoft.Json.JsonConvert.SerializeObject(requestPayload(Newtonsoft.Json.JsonConvert.SerializeObject(user)));
+            bool response = ExecuteApiRequest(string.Format(@"{0}/api/{1}", baseUrl, System.Enum.GetName(typeof(msApi), msApi.userLogout)), soapStr, ref soapResponse, ref err);
             if (response)
             {
                 dynamic payload = Newtonsoft.Json.JsonConvert.DeserializeObject(soapResponse);
