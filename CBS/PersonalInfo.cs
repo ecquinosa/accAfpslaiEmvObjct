@@ -16,33 +16,33 @@ namespace accAfpslaiEmvObjct
     {
         public List<ClientIdentificationList> ClientIdentificationList { get; set; }
         public List<AddressList> AddressList { get; set; }
-        public List<ContactList> ContactList { get; set; }      
-        public string CIF_NO { get; set; }
-        public string CLIENT_TYPE { get; set; }
-        public string FIRST_NAME { get; set; }
-        public string MIDDLE_NAME { get; set; }
-        public string LAST_NAME { get; set; }
-        public string SUFFIX_NAME { get; set; }
-        public string SEX { get; set; }
+        public List<ContactList> ContactList { get; set; }
+        public string CIF_NO { get; set; } = "";
+        public string CLIENT_TYPE { get; set; } = "";
+        public string FIRST_NAME { get; set; } = "";
+        public string MIDDLE_NAME { get; set; } = "";
+        public string LAST_NAME { get; set; } = "";
+        public string SUFFIX_NAME { get; set; } = "";
+        public string SEX { get; set; } = "";
         public Nullable<System.DateTime> BIRTH_CORP_DATE { get; set; }
-        public string BIRTH_PLACE { get; set; }
-        public string CLIENT_STATUS_CODE { get; set; }
-        public string MARITAL_STATUS { get; set; }        
+        public string BIRTH_PLACE { get; set; } = "";
+        public string CLIENT_STATUS_CODE { get; set; } = "";
+        public string MARITAL_STATUS { get; set; } = "";
         public string NATIONALITY_CODE { get; set; }
-        public string BRANCH_CODE { get; set; }
+        public string BRANCH_CODE { get; set; } = "";
         public Nullable<System.DateTime> DECEASED_DATE { get; set; }        
         public int BLACKLISTED { get; set; }
-        public string CLIENT_SOURCE_CODE { get; set; }      
+        public string CLIENT_SOURCE_CODE { get; set; } = "";
         public Nullable<System.DateTime> LAST_UPDATED_DATE { get; set; }
         public string LAST_UPDATED_BY { get; set; }
         public string LAST_UPDATED_BRANCH { get; set; }
         public string LAST_APPROVED_BY { get; set; }
         public Nullable<System.DateTime> DATE_OPEN { get; set; }
-       public string ENDOSER_CIF_NO { get; set; }
-        public string ENDOSER_LAST_NAME { get; set; }
-        public string ENDOSER_FIRST_NAME { get; set; }
-        public string ENDOSER_MIDDLE_NAME { get; set; }
-        public string ENDOSER_SUFFIX_NAME { get; set; }
-        public string CLIENT_SUB_TYPE { get; set; }
+       public string ENDOSER_CIF_NO { get; set; } = "";
+        public string ENDOSER_LAST_NAME { get; set; } = "";
+        public string ENDOSER_FIRST_NAME { get; set; } = "";
+        public string ENDOSER_MIDDLE_NAME { get; set; } = "";
+        public string ENDOSER_SUFFIX_NAME { get; set; } = "";
+        public string CLIENT_SUB_TYPE { get; set; } = "";
     }
 }
